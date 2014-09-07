@@ -26,7 +26,7 @@ export default ObjectController.extend({
 
   show: function(username, uploadedAvatarId) {
     // XSS protection (should be encapsulated)
-    username = username.replace(/[^A-Za-z0-9_]/g, "");
+    username = username.replace(/[^A-Za-z0-9_\.]/g, "");
     var url = "/users/" + username;
 
     // Don't show on mobile

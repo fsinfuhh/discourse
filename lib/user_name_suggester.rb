@@ -36,7 +36,7 @@ module UserNameSuggester
   def self.sanitize_username(name)
     name = ActiveSupport::Inflector.transliterate(name)
     name = name.gsub(/^[^[:alnum:]]+|\W+$/, "")
-               .gsub(/\W+/, "_")
+               .gsub(/[^\w\.]+/, "_")
                .gsub(/^\_+/, '')
     name
   end
