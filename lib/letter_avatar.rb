@@ -9,6 +9,11 @@ class LetterAvatar
         Digest::MD5.hexdigest(username)[0...15].to_i(16) % LetterAvatar::COLORS.length
       ]
       identity.letter = username[0].upcase
+      if username =~ /^\d\d\w{1,7}$/ # inf account like '12musterm'
+        identity.letter = username[1]
+      else
+        identity.letter = username[0].upcase
+      end
       identity
     end
   end
@@ -21,7 +26,6 @@ class LetterAvatar
   POINTSIZE = 280
 
   class << self
-
     def version
       "#{VERSION}_#{image_magick_version}"
     end
