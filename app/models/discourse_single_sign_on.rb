@@ -83,7 +83,7 @@ class DiscourseSingleSignOn < SingleSignOn
 
     user_params = {
         email: email,
-        name:  User.suggest_name(try_name || try_username || email),
+        name:  try_name || User.suggest_name(try_username || email),
         username: UserNameSuggester.suggest(try_username || try_name || email),
     }
 
