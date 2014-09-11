@@ -1949,7 +1949,7 @@ de:
           description: Hat einen Beitrag bearbeitet
         basic_user:
           name: Neuling
-          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/4">Ermöglicht</a> das Nutzen alle wesentlichen Community-Funktionen
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/4">Ermöglicht</a> das Nutzen aller wesentlichen Community-Funktionen
         regular_user:
           name: Stammgast
           description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/5">Ermöglicht</a> das Versenden von Einladungen
