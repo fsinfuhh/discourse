@@ -2832,49 +2832,129 @@ de:
             with_post: <span class="username">%{username}</span> für Beitrag in %{link}
             with_post_time: <span class="username">%{username}</span> für Beitrag in %{link} um <span class="time">%{time}</span>
             with_time: <span class="username">%{username}</span> um <span class="time">%{time}</span>
-      emoji:
-        title: "Emoji"
-        help: "Neues Emoji hinzufügen, dass für alle verfügbar sein wird. (Tipp: per Drag & Drop kannst du gleichzeitig mehrere Dateien hinzufügen)"
-        add: "Neues Emoji hinzufügen"
-        name: "Name"
-        image: "Bild"
-        delete_confirm: "Möchtest du wirklich das :%{name}: Emoji löschen?"
-      embedding:
-        get_started: "Wenn du Discourse in einer anderen Website einbetten möchtest, beginne mit dem hinzufügen des host. "
-        confirm_delete: "Möchtest du wirklich  diesen Host löschen?"
-        sample: "Benutze den folgenden HTML code für deine Site um Discourse Beiträge zu erstellen und einzubetten. Ersetze <b>REPLACE_ME</b> mit der URL der Site in die du sie einbetten möchtest."
-        title: "Einbettung"
-        host: "Erlaubte Hosts"
-        edit: "bearbeiten"
-        category: "In Kategorie Beitrag schreiben"
-        add_host: "Host hinzufügen"
-        settings: "Einbettungseinstellungen"
-        feed_settings: "Feed-Einstellungen"
-        feed_description: "Wenn man RSS/ATOM Feeds für eine Website zur Verfügung stellt, können sich die Möglichkeiten des Imports verbessern. "
-        crawling_settings: "Crawler-Einstellungen"
-        crawling_description: "Wenn Discourse Themen für deine Beiträge erstellt wird es falls kein RSS/ATOM-Feed verfügbar ist versuchen, den Inhalt aus dem HTML-Code zu extrahieren. Dies ist teilweise schwierig, weshalb hier CSS-Regeln angegeben werden können, die die Extraktion erleichtern."
-        embed_by_username: "Benutzername für Beitragserstellung"
-        embed_post_limit: "Maximale Anzahl der Beiträge, welche eingebettet werden"
-        embed_username_key_from_feed: "Schlüssel, um Discourse-Benutzernamen aus Feed zu ermitteln."
-        embed_truncate: "Kürze die eingebetteten Beiträge"
-        embed_whitelist_selector: "CSS Selektor für Elemente, die in Einbettungen erlaubt sind."
-        embed_blacklist_selector: "CSS Selektor für Elemente, die in Einbettungen entfernt werden."
-        embed_classname_whitelist: "Erlaubte CSS-Klassen"
-        feed_polling_enabled: "Beiträge über RSS/ATOM importieren"
-        feed_polling_url: "URL des RSS/ATOM Feeds für den Import"
-        save: "Einbettungseinstellungen speichern"
-      permalink:
-        title: "Permanentlinks"
-        url: "URL"
-        topic_id: "Themen-ID"
-        topic_title: "Thema"
-        post_id: "Beitrags-ID"
-        post_title: "Beitrag"
-        category_id: "Kategorie-ID"
-        category_title: "Kategorie"
-        external_url: "Externe URL"
-        delete_confirm: Möchtest du wirklich diesen Permanentlink löschen?
-        form:
-          label: "Neu:"
-          add: "Hinzufügen"
-          filter: "Suche (URL oder externe URL)"
+    lightbox:
+      download: "herunterladen"
+    keyboard_shortcuts_help:
+      title: 'Tastenkombinationen'
+      jump_to:
+        title: 'Springe zu'
+        home: '<b>G</b>, <b>H</b> Hauptseite (Aktuell)'
+        latest: '<b>G</b>, <b>L</b> Aktuell'
+        new: '<b>G</b>, <b>N</b> Neu'
+        unread: '<b>G</b>, <b>U</b> Ungelesen'
+        starred: '<b>G</b>, <b>F</b> Favorisiert'
+        categories: '<b>G</b>, <b>C</b> Kategorien'
+      navigation:
+        title: 'Navigation'
+        jump: '<b>#</b> Springe zu Beitrag Nr.'
+        back: '<b>U</b> Zurück'
+        up_down: '<b>K</b> / <b>J</b> Auswahl nach oben/unten bewegen'
+        open: '<b>O</b> oder <b>↵ Eingabe</b> Ausgewähltes Thema anzeigen'
+        next_prev: '<b>⇧ Umsch</b> + <b>J</b> / <b>⇧ Umsch</b> + <b>K</b> Nächster/vorheriger Abschnitt'
+      application:
+        title: 'Anwendung'
+        create: '<b>C</b> Neues Thema erstellen'
+        notifications: '<b>N</b> Benachrichtigungen anzeigen'
+        site_map_menu: '<b>=</b> Sitemap-Menü öffnen'
+        user_profile_menu: '<b>p</b> Profil-Menü öffnen'
+        show_incoming_updated_topics: '<b>.</b> Zeige neue/geänderte Themen'
+        search: '<b>/</b> Suchen'
+        help: '<b>?</b> Hilfe zu Tastenkombinationen anzeigen'
+        dismiss_new_posts: '<b>X</b>, <b>R</b> Neue Themen / Beiträge ignorieren'
+        dismiss_topics: '<b>X</b>, <b>T</b> Themen ignorieren'
+      actions:
+        title: 'Aktionen'
+        star: '<b>F</b> Thema favorisieren'
+        share_topic: '<b>⇧ Umsch</b> + <b>S</b> Thema teilen'
+        share_post: '<b>S</b> Beitrag teilen'
+        reply_as_new_topic: '<b>T</b> Mit Themenwechsel antworten'
+        reply_topic: '<b>⇧ Umsch</b> + <b>R</b> Auf Thema antworten'
+        reply_post: '<b>R</b> Auf Beitrag antworten'
+        quote_post: '<b>Q</b> Beitrag zitieren'
+        like: '<b>L</b> Beitrag gefällt mir'
+        flag: '<b>!</b> Beitrag melden'
+        bookmark: '<b>B</b> Lesezeichen auf Beitrag setzen'
+        edit: '<b>E</b> Beitrag bearbeiten'
+        delete: '<b>D</b> Beitrag löschen'
+        mark_muted: '<b>M</b>, <b>M</b> Thema stummschalten'
+        mark_regular: '<b>M</b>, <b>R</b> Thema auf Normal setzen'
+        mark_tracking: '<b>M</b>, <b>T</b> Thema verfolgen'
+        mark_watching: '<b>M</b>, <b>W</b> Thema beobachten'
+    badges:
+      title: Abzeichen
+      allow_title: "Abzeichen als Titel erlauben?"
+      multiple_grant: "wird mehrfach verliehen?"
+      badge_count:
+        one: "1 Abzeichen"
+        other: "%{count} Abzeichen"
+      more_badges:
+        one: "+1 mehr"
+        other: "+%{count} mehr"
+      granted:
+        one: "1 mal verliehen"
+        other: "%{count} mal verliehen"
+      select_badge_for_title: Wähle ein Abzeichen als deinen Titel aus
+      no_title: "<keine Titel>"
+      badge_grouping:
+        getting_started:
+          name: Erste Schritte
+        community:
+          name: Community
+        trust_level:
+          name: Vertrauensstufe
+        other:
+          name: Andere
+        posting:
+          name: Beiträge
+      badge:
+        editor:
+          name: Bearbeiter
+          description: Hat einen Beitrag bearbeitet
+        basic_user:
+          name: Neuling
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/4">Ermöglicht</a> das Nutzen aller wesentlichen Community-Funktionen
+        regular_user:
+          name: Stammgast
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/5">Ermöglicht</a> das Versenden von Einladungen
+        leader:
+          name: Veteran
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/6">Ermöglicht</a> das Verschieben und Umbenennen von Themen, das Veröffentlichen von <a href="http://de.wikipedia.org/wiki/Nofollow">verfolgbaren Links</a> und den Zugang zur Lounge
+        elder:
+          name: Ältester
+          description: <a href="https://meta.discourse.org/t/what-do-user-trust-levels-do/4924/7">Ermöglicht</a> das Bearbeiten aller Beiträge und das Anheften, Schließen, Archivieren, Aufteilen und Zusammenfügen von Themen
+        welcome:
+          name: Willkommen
+          description: Hat ein Like erhalten
+        autobiographer:
+          name: Autobiograf
+          description: Hat <a href="/my/preferences">Benutzerprofil</a> ausgefüllt
+        nice_post:
+          name: Netter Beitrag
+          description: Hat 10 Likes für einen Beitrag erhalten. Dieses Abzeichen kann mehrfach verliehen werden.
+        good_post:
+          name: Guter Beitrag
+          description: Hat 25 Likes für einen Beitrag erhalten. Dieses Abzeichen kann mehrfach verliehen werden.
+        great_post:
+          name: Großartiger Beitrag
+          description: Hat 50 Likes für einen Beitrag erhalten. Dieses Abzeichen kann mehrfach verliehen werden.
+        first_like:
+          name: Erster Like
+          description: Hat Gefallen an einem Beitrag gefunden
+        first_flag:
+          name: Erste Meldung
+          description: Hat einen Beitrag gemeldet
+        first_share:
+          name: Erster geteilter Beitrag
+          description: Hat einen Beitrag geteilt
+        first_link:
+          name: Erster Link
+          description: Hat einen internen Link auf einen anderen Beitrag hinzugefügt
+        first_quote:
+          name: Erstes Zitat
+          description: Hat einen Benutzer zitiert
+        read_guidelines:
+          name: Richtlinien gelesen
+          description: Hat die <a href="/guidelines">Community-Richtlinien</a> gelesen
+        reader:
+          name: Leser
+          description: Hat in einem Thema mit mehr als 100 Beiträgen jeden Beitrag gelesen
